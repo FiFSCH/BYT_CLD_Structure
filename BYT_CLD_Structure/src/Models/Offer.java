@@ -83,8 +83,8 @@ public class Offer {
         return bookCondition;
     }
 
-    public void setBookCondition(String bookCondition) {
-        this.bookCondition = bookCondition;
+    public void setBookCondition(int index) {
+        this.bookCondition = getBookConditionTypes(index);
     }
 
     public String getBookAuthor() {
@@ -122,8 +122,8 @@ public class Offer {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setStatus(int index) {
+        this.status = getOfferStatusTypes(index);
     }
 
     public String getBookConditionTypes(int index) throws IndexOutOfBoundsException {

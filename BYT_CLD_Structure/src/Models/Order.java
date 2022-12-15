@@ -14,14 +14,14 @@ public class Order {
     private LocalDate dateCreated;
     //Optional attributes can also be created by using overloaded constructors with or without this field
     private Optional<LocalDate> dateFinished; //Might get changed;
-    private String accountStatus;
+    private String status;
     private String deliveryAddress; //String instead of some geoLocation for simplicity
 
-    public Order( LocalDate dateCreated, Optional<LocalDate> dateFinished, String accountStatus, String deliveryAddress) {
+    public Order( LocalDate dateCreated, Optional<LocalDate> dateFinished, int statusIndex, String deliveryAddress) {
         this.id = setId();
         this.dateCreated = dateCreated;
         this.dateFinished = dateFinished;
-        this.accountStatus = accountStatus;
+        this.status = getStatusType(statusIndex);
         this.deliveryAddress = deliveryAddress;
     }
 
@@ -55,12 +55,12 @@ public class Order {
         this.dateFinished = dateFinished;
     }
 
-    public String getAccountStatus() {
-        return accountStatus;
+    public String getStatus() {
+        return status;
     }
 
-    public void setAccountStatus(String accountStatus) {
-        this.accountStatus = accountStatus;
+    public void setStatus(int index) {
+        this.status = getStatusType(index);
     }
 
     public String getDeliveryAddress() {
@@ -70,6 +70,15 @@ public class Order {
     public void setDeliveryAddress(String deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
     }
+    /**
+     * We can omit this method and simply directly access the value from the array
+     * But I thought that adding some validation would be nice
+     */
+    public String getStatusType(int index) throws IndexOutOfBoundsException {
+        if (index < possibleOrderStatuses.length)
+            return possibleOrderStatuses[index];
+        throw new IndexOutOfBoundsException();
+    }
 
     @Override
     public String toString() {
@@ -77,7 +86,7 @@ public class Order {
                 "id=" + id +
                 ", dateCreated=" + dateCreated +
                 ", dateFinished=" + dateFinished +
-                ", accountStatus='" + accountStatus + '\'' +
+                ", status='" + status + '\'' +
                 ", deliveryAddress='" + deliveryAddress + '\'' +
                 '}';
     }
