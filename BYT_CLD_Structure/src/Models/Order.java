@@ -17,12 +17,16 @@ public class Order {
     private String status;
     private String deliveryAddress; //String instead of some geoLocation for simplicity
 
-    public Order( LocalDate dateCreated, Optional<LocalDate> dateFinished, int statusIndex, String deliveryAddress) {
+    public Order(LocalDate dateCreated, Optional<LocalDate> dateFinished, int statusIndex, String deliveryAddress) {
         this.id = setId();
         this.dateCreated = dateCreated;
         this.dateFinished = dateFinished;
-        this.status = getStatusType(statusIndex);
         this.deliveryAddress = deliveryAddress;
+        try {
+            this.status = getStatusType(statusIndex);
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
     }
 
     public int getId() {
@@ -70,6 +74,7 @@ public class Order {
     public void setDeliveryAddress(String deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
     }
+
     /**
      * We can omit this method and simply directly access the value from the array
      * But I thought that adding some validation would be nice
