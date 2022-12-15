@@ -5,6 +5,7 @@ import java.util.Optional;
 
 //TODO: Implement constraints, associations and methods according to the MAS lecture slides
 public class Offer {
+
     /**
      * Done in such a way because there are only a few available values of the status
      */
@@ -19,7 +20,7 @@ public class Offer {
     private String bookCondition;
     private String bookAuthor;
     private Optional<String> publishingCompany; //Same case as with the "dateEnded"
-    private Object[] picture = new Object[8];  /*This array was supposed to be an image array
+    private Object[] picture = new Object[8];  /**This array was supposed to be an image array
                                      but after asking the teacher we agreed on omitting pictures
                                      for simplicity reasons*/
     private String status;
@@ -126,13 +127,13 @@ public class Offer {
         this.status = getOfferStatusTypes(index);
     }
 
-    public String getBookConditionTypes(int index) throws IndexOutOfBoundsException {
+    public static String getBookConditionTypes(int index) throws IndexOutOfBoundsException {
         if (index < possibleBookConditions.length)
             return possibleBookConditions[index];
         throw new IndexOutOfBoundsException();
     }
 
-    public String getOfferStatusTypes(int index) throws IndexOutOfBoundsException {
+    public static String getOfferStatusTypes(int index) throws IndexOutOfBoundsException {
         if (index < possibleOfferStatus.length)
             return possibleOfferStatus[index];
         throw new IndexOutOfBoundsException();
