@@ -1,11 +1,11 @@
 package Models;
 
-//TODO: Implement constraints, associations and methods according tho the MAS lecture slides
+//TODO: Implement constraints, associations and methods according to the MAS lecture slides
 public class User extends Person {
     /**
      * Done in such a way because there are only a few available values of the status
      */
-    private static final String[] possibleAccountStatuses = new String[]{"active", "suspended"};
+    private static final String[] possibleAccountStatuses = {"active", "suspended"};
     private String accountStatus;
 
     public User(String login, String password, String nickname, String emailAddress, int accountStatusIndex) {
