@@ -10,10 +10,10 @@ Implementation of CLD structure for BYT classes
 
 
 ## TODO :heavy_check_mark:
-- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/1 - Unit tests - Gokce Altunkanat and Filip Schulz 
-- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/2 - Methods - ?????
-- [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/3 - Classes - Filip Schulz
-- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/4 - Associations - ?????
+- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/1 - **_Unit tests_** - Gokce Altunkanat and Filip Schulz 
+- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/2 - **_Methods_** - ?????
+- [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/3 - **_Classes_** - Filip Schulz
+- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/4 - **_Associations_** - ?????
 ## Installation :arrow_down:
 
 In Git bash:
@@ -22,7 +22,7 @@ In Git bash:
   cd BYT_CLD_Structure
   git checkout -b NameOfLocalBranch
 ```
-In downloaded files should be a folder BYT_CLD_Structure. This folder should contain files:
+In downloaded files there should be a folder BYT_CLD_Structure. This folder should contain files:
 `.idea, src and BYT_CLD_Structure.iml`. Open **THIS** folder in IntelliJ. Otherwise you might have problems with paths.
 
 ## Contribution :family:
