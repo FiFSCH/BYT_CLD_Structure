@@ -1,6 +1,8 @@
 package Models;
 
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 //TODO: Implement constraints, associations and methods according to the MAS lecture slides
@@ -8,6 +10,7 @@ public class Order {
     /**
      * Done in such a way because there are only a few available values of the status
      */
+    public static Map<Integer, Order> allOrders = new HashMap<>();
     private static final String[] possibleOrderStatuses = {"cancelled", "in progress", "finished"};
     private static int idCounter = 0; //we will use this as unique ID, but it might get changed later (tmp solution)
     private final int id;
@@ -27,6 +30,7 @@ public class Order {
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
         }
+        allOrders.put(this.id,this);
     }
 
     public int getId() {
