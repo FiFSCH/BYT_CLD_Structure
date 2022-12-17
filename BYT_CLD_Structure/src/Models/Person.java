@@ -1,7 +1,11 @@
 package Models;
 
+import java.util.HashMap;
+import java.util.Map;
+
 //TODO: Implement constraints, associations and methods according to the MAS lecture slides
 public abstract class Person {
+    public static Map<Integer, Person> allPeople = new HashMap<>();
     private static int idCounter = 0; //we will use this as unique ID, but it might get changed later (tmp solution)
     private final int id;
     private String login;
@@ -19,6 +23,7 @@ public abstract class Person {
         this.password = password;
         this.nickname = nickname;
         this.emailAddress = emailAddress;
+        allPeople.put(this.id,this);
     }
 
 

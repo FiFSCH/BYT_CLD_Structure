@@ -15,7 +15,16 @@ public class User extends Person {
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
         }
+    }
 
+    public User(Person prevPerson, int accountStatusIndex) {
+        super(prevPerson.getLogin(), prevPerson.getPassword(), prevPerson.getNickname(), prevPerson.getEmailAddress());
+        try {
+            this.accountStatus = getStatusType(accountStatusIndex);
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+        Person.allPeople.remove(prevPerson.getId());
     }
 
     public String getAccountStatus() {
@@ -40,6 +49,7 @@ public class User extends Person {
     public String toString() {
         return "User{" +
                 "accountStatus='" + accountStatus + '\'' +
+                super.toString() +
                 '}';
     }
 }

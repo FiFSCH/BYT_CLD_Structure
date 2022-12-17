@@ -1,6 +1,8 @@
 package Models;
 
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 //TODO: Implement constraints, associations and methods according to the MAS lecture slides
@@ -9,6 +11,7 @@ public class Offer {
     /**
      * Done in such a way because there are only a few available values of the status
      */
+    public static Map<Integer, Offer> allOffers = new HashMap<>();
     private static final String[] possibleBookConditions = {"damaged", "used but not damaged", "new"};
     private static final String[] possibleOfferStatus = {"active", "archived"};
     private static int idCounter = 0; //we will use this as unique ID, but it might get changed later (tmp solution)
@@ -39,6 +42,7 @@ public class Offer {
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
         }
+        allOffers.put(this.id,this);
     }
 
     public int getId() {
