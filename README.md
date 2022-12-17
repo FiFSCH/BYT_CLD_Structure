@@ -10,10 +10,10 @@ Implementation of CLD structure for BYT classes
 
 
 ## TODO :heavy_check_mark:
-- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/1 - Gokce Altunkanat and Filip Schulz 
-- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/2 - ?????
-- [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/3 - Filip Schulz
-- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/4 - ?????
+- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/1 - Unit tests - Gokce Altunkanat and Filip Schulz 
+- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/2 - Methods - ?????
+- [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/3 - Classes - Filip Schulz
+- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/4 - Associations - ?????
 ## Installation :arrow_down:
 
 In Git bash:
