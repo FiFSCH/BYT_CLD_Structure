@@ -58,7 +58,7 @@ Quick instruction and some rules to follow:
 ### Polish
 - [Mas lecture 5](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-05.pdf) - Asocjacje, agregacja, kompozycja
 - [Mas lecture 6](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-06.pdf) - Więcej o asocjacjach
-- [Mas lecture 7](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-07.pdf) - Dziediczenie i abstrakcja 
+- [Mas lecture 7](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-07.pdf) - Dziedziczenie i abstrakcja 
 - [Mas lecture 8](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-08.pdf) - Ograniczenia (constraints)
 
 
