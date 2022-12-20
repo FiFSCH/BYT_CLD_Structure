@@ -104,7 +104,8 @@ public class Order {
      * Method implementation
      */
 
-    //Redundant, but since it's implemented in the diagram then why not
+    //Slightly redundant, but 3 lines of code doesn't make any major difference and leaving it here will
+    //get rid of any unnecessary confusion about the method not being implemented, as it exists in the class diagram
     public void changeStatus(int index) {
         setStatus(index);
     }
