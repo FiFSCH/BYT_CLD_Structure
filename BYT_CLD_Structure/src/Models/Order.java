@@ -20,7 +20,29 @@ public class Order {
     private String status;
     private String deliveryAddress; //String instead of some geoLocation for simplicity
 
-    public Order(LocalDate dateCreated, Optional<LocalDate> dateFinished, int statusIndex, String deliveryAddress) {
+    //ASSOCIATIONS
+    //Order - person
+    private Person person; //the person who ordered this order
+    //Order - offer
+    private Offer offer; // in MAS lectures it is mentioned the aggregation looks the same as classic association in code
+    //Order - DeliveryOrder
+    private DeliveryOrder deliveryOrder;
+
+    //getters and setters for associations
+    public DeliveryOrder getDeliveryOrder() {
+        return deliveryOrder;
+    }
+    public void setDeliveryOrder(DeliveryOrder deliveryOrder) {
+        this.deliveryOrder = deliveryOrder;
+    }
+    public Offer getOffer() {
+        return offer;
+    }
+    public void setOffer(Offer offer) {
+        this.offer = offer;
+    }
+
+    public Order(LocalDate dateCreated, Optional<LocalDate> dateFinished, int statusIndex, String deliveryAddress, Person receiver) {
         this.id = setId();
         this.dateCreated = dateCreated;
         this.dateFinished = dateFinished;

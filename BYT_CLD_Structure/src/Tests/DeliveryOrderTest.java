@@ -21,7 +21,7 @@ class DeliveryOrderTest {
     @BeforeAll
       static void setUp() {
         Do=new DeliveryOption("first delivery",37.5);
-        order1=new Order(LocalDate.of(2022, 10, 15), Optional.of(LocalDate.of(2022,10,30)),1,"address123");
+        order1=new Order(LocalDate.of(2022, 10, 15), Optional.of(LocalDate.of(2022,10,30)),1,"address123", null);
         order=new DeliveryOrder(order1,Do,LocalDate.of(2022, 11, 15),Optional.of(LocalDate.of(2022,11,30)));
     }
 

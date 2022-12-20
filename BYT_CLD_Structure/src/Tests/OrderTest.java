@@ -17,7 +17,7 @@ class OrderTest {
     //Create necessary object here but, don't initialize them here!
     @BeforeAll
     static void setUp() {
-        order=new Order(LocalDate.of(2022, 10, 15), Optional.of(LocalDate.of(2022,10,30)),1,"address123");
+        order=new Order(LocalDate.of(2022, 10, 15), Optional.of(LocalDate.of(2022,10,30)),1,"address123", null);
 
         //Initialize those objects here.
     }

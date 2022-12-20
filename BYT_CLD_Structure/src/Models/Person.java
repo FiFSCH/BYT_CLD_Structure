@@ -1,6 +1,7 @@
 package Models;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 //TODO: Implement constraints, associations and methods according to the MAS lecture slides
@@ -16,6 +17,27 @@ public abstract class Person {
                                      but after asking the teacher we agreed on omitting this field
                                      for simplicity reasons*/
 
+    //ASSOCIATIONS
+    //Person - order
+    private List<Order> orders;
+    //Person - offer
+    private List<Offer> offers;
+    // getters and setters for associations
+    public List<Offer> getOffers() {
+        return offers;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOffers(List<Offer> offers) {
+        this.offers = offers;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
 
     public Person(String login, String password, String nickname, String emailAddress) {
         this.id = setId();
