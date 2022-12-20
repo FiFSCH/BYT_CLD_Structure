@@ -99,4 +99,22 @@ public class Order {
                 ", deliveryAddress='" + deliveryAddress + '\'' +
                 '}';
     }
+
+    /**
+     * Method implementation
+     */
+
+    //Redundant, but since it's implemented in the diagram then why not
+    public void changeStatus(int index) {
+        setStatus(index);
+    }
+
+    public static void notifyAboutReadyOrders() {
+        // TODO: Implement notifyAboutReadyOrders logic
+    }
+
+    public static String generateMonthlyReport() {
+        // TODO: Implement generateMonthlyReport logic
+        return "";
+    }
 }
