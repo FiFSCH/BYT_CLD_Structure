@@ -6,19 +6,7 @@ public class Admin extends Person{
         super(login, password, nickname, emailAddress);
     }
 
-    public Admin(Person prevPerson) {
+    public Admin(Person prevPerson) { // dynamic inheritance
         super(prevPerson.getLogin(), prevPerson.getPassword(), prevPerson.getNickname(), prevPerson.getPassword());
-    }
-
-    /**
-     * Method implementation
-     */
-
-    public void reviewUser(User user) {
-        // TODO: Implement review user logic
-    }
-
-    public void reviewOffer(Offer offer) {
-        // TODO: Implement review offer logic
     }
 }

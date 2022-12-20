@@ -17,7 +17,7 @@ public class User extends Person {
         }
     }
 
-    public User(Person prevPerson, int accountStatusIndex) {
+    public User(Person prevPerson, int accountStatusIndex) { //dynamic inheritance
         super(prevPerson.getLogin(), prevPerson.getPassword(), prevPerson.getNickname(), prevPerson.getEmailAddress());
         try {
             this.accountStatus = getStatusType(accountStatusIndex);
@@ -51,13 +51,5 @@ public class User extends Person {
                 "accountStatus='" + accountStatus + '\'' +
                 super.toString() +
                 '}';
-    }
-
-    /**
-     * Method implementation
-     */
-
-    public void deleteAccount() {
-        // TODO: Implement deleteAccount logic
     }
 }

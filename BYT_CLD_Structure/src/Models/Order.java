@@ -2,6 +2,7 @@ package Models;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -20,11 +21,34 @@ public class Order {
     private String status;
     private String deliveryAddress; //String instead of some geoLocation for simplicity
 
-    public Order(LocalDate dateCreated, Optional<LocalDate> dateFinished, int statusIndex, String deliveryAddress) {
+    //ASSOCIATIONS
+    //Order - person
+    private Person person; //the person who ordered this order
+    //Order - offer
+    private Offer offer; // in MAS lectures it is mentioned the aggregation looks the same as classic association in code
+    //Order - DeliveryOrder
+    private DeliveryOrder deliveryOrder;
+
+    //getters and setters for associations
+    public DeliveryOrder getDeliveryOrder() {
+        return deliveryOrder;
+    }
+    public void setDeliveryOrder(DeliveryOrder deliveryOrder) {
+        this.deliveryOrder = deliveryOrder;
+    }
+    public Offer getOffer() {
+        return offer;
+    }
+    public void setOffer(Offer offer) {
+        this.offer = offer;
+    }
+
+    public Order(LocalDate dateCreated, Optional<LocalDate> dateFinished, int statusIndex, String deliveryAddress, Person receiver) {
         this.id = setId();
         this.dateCreated = dateCreated;
         this.dateFinished = dateFinished;
         this.deliveryAddress = deliveryAddress;
+        this.person = receiver;
         try {
             this.status = getStatusType(statusIndex);
         } catch (IndexOutOfBoundsException e) {
@@ -98,24 +122,5 @@ public class Order {
                 ", status='" + status + '\'' +
                 ", deliveryAddress='" + deliveryAddress + '\'' +
                 '}';
-    }
-
-    /**
-     * Method implementation
-     */
-
-    //Slightly redundant, but 3 lines of code doesn't make any major difference and leaving it here will
-    //get rid of any unnecessary confusion about the method not being implemented, as it exists in the class diagram
-    public void changeStatus(int index) {
-        setStatus(index);
-    }
-
-    public static void notifyAboutReadyOrders() {
-        // TODO: Implement notifyAboutReadyOrders logic
-    }
-
-    public static String generateMonthlyReport() {
-        // TODO: Implement generateMonthlyReport logic
-        return "";
     }
 }

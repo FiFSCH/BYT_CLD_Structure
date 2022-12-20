@@ -2,6 +2,7 @@ package Models;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -28,14 +29,37 @@ public class Offer {
                                      for simplicity reasons*/
     private String status;
 
+    //ASSOCIATIONS
+    //Offer - person
+    private Person person; //creator of the offer
+    //Offer - delivery option
+    private List<DeliveryOption> deliveryOptions; //delivery options available for this offer
+    //Offer - order
+    private Order order; // in MAS lectures it is mentioned the aggregation looks the same as classic association in code
+
+    //getters and setters for associations
+    public List<DeliveryOption> getDeliveryOptions() {
+        return deliveryOptions;
+    }
+    public void setDeliveryOptions(List<DeliveryOption> deliveryOptions) {
+        this.deliveryOptions = deliveryOptions;
+    }
+    public Order getOrder() {
+        return order;
+    }
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
     public Offer(LocalDate dateAdded, Optional<LocalDate> dateEnded, String bookTitle, int bookConditionIndex,
-                 String bookAuthor, Optional<String> publishingCompany, int statusIndex) {
+                 String bookAuthor, Optional<String> publishingCompany, int statusIndex, Person creatorOfOffer) {
         this.id = setId();
         this.dateAdded = dateAdded;
         this.dateEnded = dateEnded;
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
         this.publishingCompany = publishingCompany;
+        this.person = creatorOfOffer;
         try {
             this.status = getOfferStatusTypes(statusIndex);
             this.bookCondition = getBookConditionTypes(bookConditionIndex);
@@ -155,32 +179,5 @@ public class Offer {
                 ", publishingCompany=" + publishingCompany +
                 ", status='" + status + '\'' +
                 '}';
-    }
-
-    /**
-     * Method implementation
-     */
-    public void changeStatus(int index) {
-        // TODO: Implement changeStatus logic
-    }
-
-    public static void listAllOffers() {
-        // TODO: Implement listAllOffers logic
-    }
-
-    public void createOffer() {
-        // TODO: Implement createOffer logic
-    }
-
-    public void deleteOffer() {
-        // TODO: Implement deleteOffer logic
-    }
-
-    public void reportOffer() {
-        // TODO: Implement reportOffer logic
-    }
-
-    public void reserveOffer() {
-        // TODO: Implement reserveOffer logic
     }
 }
