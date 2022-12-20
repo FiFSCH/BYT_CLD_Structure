@@ -23,8 +23,8 @@ public class OfferTest {
     public static void setUp() throws IndexOutOfBoundsException {
         //In case of values wrapped inside Optional class
         //it is better to use Optional.empty() instead of null, but I used null for clarity.
-        offer1 = new Offer(currentDate, null, "SampleTitle", 2, "Author1", null, 1);
-        offer2 = new Offer(currentDate, null, "SampleTitle2", 2, "Author2", publisher, 1);
+        offer1 = new Offer(currentDate, null, "SampleTitle", 2, "Author1", null, 1, null);
+        offer2 = new Offer(currentDate, null, "SampleTitle2", 2, "Author2", publisher, 1, null);
     }
 
     @Test
