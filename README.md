@@ -6,7 +6,8 @@ Implementation of CLD structure for BYT classes.
 
 ## Diagram :chart_with_upwards_trend:
 
-![Diagram](https://user-images.githubusercontent.com/101246547/205025385-8f476a16-60cb-4657-af52-87116f2bdc7b.svg "Class diagram")
+
+![Diagram](https://user-images.githubusercontent.com/101246547/208749935-3bc130fc-0275-4cb5-b8d4-cb93bb6d6476.png "Class diagram")
 
 
 ## TODO :heavy_check_mark:
