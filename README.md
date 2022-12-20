@@ -15,7 +15,7 @@ Implementation of CLD structure for BYT classes.
 - [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/2 - **_Methods_** - Maciej Czupyt
 - [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/3 - **_Classes_** - Filip Schulz
 - [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/4 - **_Associations_** - Mateusz Dłużniewski
-- [] https://github.com/FiFSCH/BYT_CLD_Structure/issues/12 - **_GUI Mockup_** - Maciej Sulimka
+- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/12 - **_GUI Mockup_** - Maciej Sulimka
 ## Installation :arrow_down:
 
 In Git bash:
