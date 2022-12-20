@@ -22,6 +22,7 @@ public abstract class Person {
     private List<Order> orders;
     //Person - offer
     private List<Offer> offers;
+
     // getters and setters for associations
     public List<Offer> getOffers() {
         return offers;
@@ -39,13 +40,14 @@ public abstract class Person {
         this.orders = orders;
     }
 
+
     public Person(String login, String password, String nickname, String emailAddress) {
         this.id = setId();
         this.login = login;
         this.password = password;
         this.nickname = nickname;
         this.emailAddress = emailAddress;
-        allPeople.put(this.id,this);
+        allPeople.put(this.id, this);
     }
 
 
@@ -121,8 +123,8 @@ public abstract class Person {
     }
 
     /**
-     Method implementation
-     I set login and register to static, because it doesn't really make sense otherwise. It's different in the diagram
+     * Method implementation
+     * I set login and register to static, because it doesn't really make sense otherwise. It's different in the diagram
      */
     public static boolean login(String username, String password) {
         // TODO: Implement login logic

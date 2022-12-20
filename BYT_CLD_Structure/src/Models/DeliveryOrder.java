@@ -29,7 +29,7 @@ public class DeliveryOrder {
         this.deliveryOption = deliveryOption;
         this.startDate = startDate;
         this.endDate = endDate;
-        allDeliveryOrders.put(this.id,this);
+        allDeliveryOrders.put(this.id, this);
     }
 
     public int getId() {

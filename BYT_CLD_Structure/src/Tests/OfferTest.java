@@ -1,15 +1,20 @@
 package Tests;
 
-import Models.Offer;
+import Models.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class OfferTest {
+    /**
+     * Tests are only for getters and setters because other methods didn't have to be implemented.
+     */
     static LocalDate currentDate = LocalDate.now();
     /**
      * Because I wrapped optional attributes inside Optional Class, we have to create those values in the way showed below;
@@ -27,11 +32,52 @@ public class OfferTest {
         offer2 = new Offer(currentDate, null, "SampleTitle2", 2, "Author2", publisher, 1, null);
     }
 
+
     @Test
     public void checkIfExist() {
         Assertions.assertNotNull(offer1);
         Assertions.assertNotNull(offer2);
     }
+
+    @Test
+    public void getPerson() {
+        Assertions.assertNull(offer1.getPerson(), "Should be null!");
+    }
+
+    @Test
+    public void setPerson() {
+        Person p = new User("login", "Password", "nick", "email", 1);
+        offer2.setPerson(p);
+        Assertions.assertEquals(p, offer2.getPerson(), "Objects should be the same!");
+        offer2.setPerson(null);
+    }
+
+    @Test
+    public void getDeliveryOptions() {
+        Assertions.assertNull(offer1.getDeliveryOptions(), "Should be null!");
+    }
+
+    @Test
+    public void setDeliveryOptions() {
+        List<DeliveryOption> deliveryOptions = new ArrayList<>();
+        offer2.setDeliveryOptions(deliveryOptions);
+        Assertions.assertEquals(deliveryOptions, offer2.getDeliveryOptions(), "Objects should be the same!");
+        offer2.setDeliveryOptions(null);
+    }
+
+    @Test
+    public void getOrder() {
+        Assertions.assertNull(offer1.getOrder(), "Should be null!");
+    }
+
+    @Test
+    public void setOrder() {
+        Order order = new Order(LocalDate.now(), Optional.empty(), 1, "address", null);
+        offer2.setOrder(order);
+        Assertions.assertEquals(order, offer2.getOrder(), "Objects should be the same!");
+        offer2.setOrder(null);
+    }
+
 
     @Test
     public void checkId() {

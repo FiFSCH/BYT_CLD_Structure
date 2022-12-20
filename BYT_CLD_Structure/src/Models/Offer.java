@@ -24,9 +24,12 @@ public class Offer {
     private String bookCondition;
     private String bookAuthor;
     private Optional<String> publishingCompany; //Same case as with the "dateEnded"
-    private Object[] picture = new Object[8];  /**This array was supposed to be an image array
-                                     but after asking the teacher we agreed on omitting pictures
-                                     for simplicity reasons*/
+    private Object[] picture = new Object[8];
+    /**
+     * This array was supposed to be an image array
+     * but after asking the teacher we agreed on omitting pictures
+     * for simplicity reasons
+     */
     private String status;
 
     //ASSOCIATIONS
@@ -38,15 +41,27 @@ public class Offer {
     private Order order; // in MAS lectures it is mentioned the aggregation looks the same as classic association in code
 
     //getters and setters for associations
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
     public List<DeliveryOption> getDeliveryOptions() {
         return deliveryOptions;
     }
+
     public void setDeliveryOptions(List<DeliveryOption> deliveryOptions) {
         this.deliveryOptions = deliveryOptions;
     }
+
     public Order getOrder() {
         return order;
     }
+
     public void setOrder(Order order) {
         this.order = order;
     }
@@ -65,7 +80,7 @@ public class Offer {
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
         }
-        allOffers.put(this.id,this);
+        allOffers.put(this.id, this);
     }
 
     public int getId() {

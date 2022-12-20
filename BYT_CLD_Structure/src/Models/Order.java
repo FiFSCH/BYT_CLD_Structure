@@ -29,15 +29,27 @@ public class Order {
     private DeliveryOrder deliveryOrder;
 
     //getters and setters for associations
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
     public DeliveryOrder getDeliveryOrder() {
         return deliveryOrder;
     }
+
     public void setDeliveryOrder(DeliveryOrder deliveryOrder) {
         this.deliveryOrder = deliveryOrder;
     }
+
     public Offer getOffer() {
         return offer;
     }
+
     public void setOffer(Offer offer) {
         this.offer = offer;
     }
@@ -52,7 +64,7 @@ public class Order {
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
         }
-        allOrders.put(this.id,this);
+        allOrders.put(this.id, this);
     }
 
     public int getId() {

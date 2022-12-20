@@ -15,12 +15,15 @@ public class DeliveryOption {
     public DeliveryOrder getDeliveryOrder() {
         return deliveryOrder;
     }
+
     public void setDeliveryOrder(DeliveryOrder deliveryOrder) {
         this.deliveryOrder = deliveryOrder;
     }
+
     public Offer getOffer() {
         return offer;
     }
+
     public void setOffer(Offer offer) {
         this.offer = offer;
     }
