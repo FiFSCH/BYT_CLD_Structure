@@ -1,7 +1,7 @@
 
 # BYT_CLD_Structure :rocket:
 
-Implementation of CLD structure for BYT classes
+Implementation of CLD structure for BYT classes.
 
 
 ## Diagram :chart_with_upwards_trend:
@@ -11,9 +11,10 @@ Implementation of CLD structure for BYT classes
 
 ## TODO :heavy_check_mark:
 - [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/1 - **_Unit tests_** - Gokce Altunkanat and Filip Schulz 
-- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/2 - **_Methods_** - ?????
+- [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/2 - **_Methods_** - Maciej Czupyt
 - [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/3 - **_Classes_** - Filip Schulz
-- [ ] https://github.com/FiFSCH/BYT_CLD_Structure/issues/4 - **_Associations_** - ?????
+- [x] https://github.com/FiFSCH/BYT_CLD_Structure/issues/4 - **_Associations_** - Mateusz Dłużniewski
+- [] https://github.com/FiFSCH/BYT_CLD_Structure/issues/12 - **_GUI Mockup_** - Maciej Sulimka
 ## Installation :arrow_down:
 
 In Git bash:
@@ -56,7 +57,7 @@ Quick instruction and some rules to follow:
 ### Polish
 - [Mas lecture 5](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-05.pdf) - Asocjacje, agregacja, kompozycja
 - [Mas lecture 6](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-06.pdf) - Więcej o asocjacjach
-- [Mas lecture 7](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-07.pdf) - Inheritance and abstraction
+- [Mas lecture 7](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-07.pdf) - Dziediczenie i abstrakcja 
 - [Mas lecture 8](https://users.pja.edu.pl/~mtrzaska/Files/MAS/MAS-08.pdf) - Ograniczenia (constraints)
 
 
