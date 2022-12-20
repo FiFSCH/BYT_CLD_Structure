@@ -97,4 +97,34 @@ public abstract class Person {
                 ", emailAddress='" + emailAddress + '\'' +
                 '}';
     }
+
+    /**
+     Method implementation
+     I set login and register to static, because it doesn't really make sense otherwise. It's different in the diagram
+     */
+    public static boolean login(String username, String password) {
+        // TODO: Implement login logic
+        return false;
+    }
+
+    public static boolean register(String username, String password, String nickname, String email, Object profilePicture) {
+        // TODO: Implement register logic
+        return false;
+    }
+
+    public void changeNickname(String nickname) {
+        // TODO: Implement change nickname logic
+    }
+
+    public void changePassword(String password) {
+        // TODO: Implement change password logic
+    }
+
+    public void changeProfilePicture(Object profilePicture) {
+        // TODO: Implement change profile picture logic
+    }
+
+    public void reportUser(String user, String reportDescription) {
+        // TODO: Implement report user logic
+    }
 }

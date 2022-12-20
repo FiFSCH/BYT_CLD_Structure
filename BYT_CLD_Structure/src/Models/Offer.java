@@ -156,4 +156,31 @@ public class Offer {
                 ", status='" + status + '\'' +
                 '}';
     }
+
+    /**
+     * Method implementation
+     */
+    public void changeStatus(int index) {
+        // TODO: Implement changeStatus logic
+    }
+
+    public static void listAllOffers() {
+        // TODO: Implement listAllOffers logic
+    }
+
+    public void createOffer() {
+        // TODO: Implement createOffer logic
+    }
+
+    public void deleteOffer() {
+        // TODO: Implement deleteOffer logic
+    }
+
+    public void reportOffer() {
+        // TODO: Implement reportOffer logic
+    }
+
+    public void reserveOffer() {
+        // TODO: Implement reserveOffer logic
+    }
 }

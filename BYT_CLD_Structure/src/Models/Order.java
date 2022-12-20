@@ -99,4 +99,23 @@ public class Order {
                 ", deliveryAddress='" + deliveryAddress + '\'' +
                 '}';
     }
+
+    /**
+     * Method implementation
+     */
+
+    //Slightly redundant, but 3 lines of code doesn't make any major difference and leaving it here will
+    //get rid of any unnecessary confusion about the method not being implemented, as it exists in the class diagram
+    public void changeStatus(int index) {
+        setStatus(index);
+    }
+
+    public static void notifyAboutReadyOrders() {
+        // TODO: Implement notifyAboutReadyOrders logic
+    }
+
+    public static String generateMonthlyReport() {
+        // TODO: Implement generateMonthlyReport logic
+        return "";
+    }
 }

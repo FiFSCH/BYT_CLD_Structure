@@ -52,4 +52,12 @@ public class User extends Person {
                 super.toString() +
                 '}';
     }
+
+    /**
+     * Method implementation
+     */
+
+    public void deleteAccount() {
+        // TODO: Implement deleteAccount logic
+    }
 }
